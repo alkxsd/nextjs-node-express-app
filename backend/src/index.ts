@@ -6,6 +6,9 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 /* ROUTE IMPORTS */
 import dashboardRoutes from './routes/dashboardRoutes';
+import expenseRoutes from './routes/expenseRoutes';
+import productRoutes from './routes/productRoutes';
+import userRoutes from './routes/userRoutes';
 
 /* CONFIGURATIONS */
 dotenv.config();
@@ -21,6 +24,9 @@ app.use(cors());
 
 /* ROUTES */
 app.use('/dashboard', dashboardRoutes);
+app.use('/products', productRoutes);
+app.use('/users', userRoutes);
+app.use('/expenses', expenseRoutes);
 
 
 /* SERVER */
