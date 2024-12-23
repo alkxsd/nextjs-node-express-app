@@ -6,15 +6,9 @@ import LoadingOverlay from "@/components/LoadingOverlay";
 import CreateProductModal from "@/components/Products/CreateProductModal";
 import Rating from "@/components/Rating";
 import { useCreateProductMutation, useGetProductsQuery } from "@/store/api";
+import { ProductFormData } from "@/store/types";
 import { PlusCircleIcon, SearchIcon } from "lucide-react";
 import { useState } from "react";
-
-type ProductFormData = {
-  name: string;
-  price: number;
-  stockQuantity: number;
-  rating: number;
-}
 
 type Props = {}
 

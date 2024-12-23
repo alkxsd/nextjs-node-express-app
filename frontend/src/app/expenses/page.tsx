@@ -2,19 +2,9 @@
 
 import Header from '@/components/Header';
 import { useGetExpensesByCategoryQuery } from '@/store/api';
-import { ExpenseByCategorySummary } from '@/store/types';
+import { AggregatedData, AggregatedDataItem, ExpenseByCategorySummary } from '@/store/types';
 import { useMemo, useState } from 'react';
 import { Cell, Legend, Pie, PieChart, ResponsiveContainer, Tooltip } from 'recharts';
-
-type AggregatedDataItem = {
-  name: string;
-  color?: string;
-  amount: number;
-};
-
-type AggregatedData = {
-  [category: string]: AggregatedDataItem;
-};
 
 const Expenses = () => {
   const [activeIndex, setActiveIndex] = useState(0);

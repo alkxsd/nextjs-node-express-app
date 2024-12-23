@@ -1,15 +1,10 @@
 'use client';
 
 import Header from "@/components/Header";
+import { UserSetting } from "@/store/types";
 import { useState } from "react";
 
 type Props = {}
-
-type UserSetting = {
-  label: string;
-  value: string | boolean;
-  type: "text" | "toggle";
-}
 
 const mockSettings: UserSetting[] = [
   { label: "Username", value: 'john_doe', type: "text"},
